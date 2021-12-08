@@ -183,9 +183,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-12-07 17:18:55 / Modified: 17:19:13" itemprop="dateCreated datePublished" datetime="2021-12-07T17:18:55+08:00">2021-12-07</time>
+              <time title="Created: 2021-12-07 17:18:55" itemprop="dateCreated datePublished" datetime="2021-12-07T17:18:55+08:00">2021-12-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-08 15:25:02" itemprop="dateModified" datetime="2021-12-08T15:25:02+08:00">2021-12-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/summary/" itemprop="url" rel="index"><span itemprop="name">summary</span></a>
+                </span>
             </span>
 
           <br>
@@ -194,7 +209,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>836</span>
+              <span>837</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -215,7 +230,8 @@
       
           <h1 id="1-基数估计算法"><a href="#1-基数估计算法" class="headerlink" title="1. 基数估计算法"></a>1. 基数估计算法</h1><h2 id="Linear-counting"><a href="#Linear-counting" class="headerlink" title="Linear counting"></a>Linear counting</h2><p>该算法用于估测数据基数，也就是说有多少不同元素，采用方法非常简单，将数据哈希到长度为m的数组，访问到的位置就置为1</p>
 <p><img src="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png" alt="Linear Counting"></p>
-<p>我们可以近似认为哈希的结果服从均匀分布，那么最后设集合基数为n的最大似然估计为    <img src="/2021/12/07/sketch/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20211207151954383.png" alt="image-20211207151954383"></p>
+<p>我们可以近似认为哈希的结果服从均匀分布，那么最后设集合基数为n的最大似然估计为</p>
+<p>​    <img src="/2021/12/07/sketch/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20211207151954383.png" alt="image-20211207151954383"></p>
 <p>其中u为哈希表中0的个数，m为数组的长度</p>
 <blockquote>
 <p>论文：- Whang, Kyu-Young, Brad T. Vander-Zanden, and Howard M. Taylor. “A linear-time probabilistic counting algorithm for database applications.” ACM Transactions on Database Systems (TODS) 15.2 (1990): 208-229.</p>
@@ -227,77 +243,6 @@
 <p>论文：Flajolet, Philippe, and G. Nigel Martin. “Probabilistic counting algorithms for data base applications.” <em>Journal of computer and system sciences</em> 31.2 (1985): 182-209.</p>
 </blockquote>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/07/hello/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Janene">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AHHHHHHA">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/07/hello/" class="post-title-link" itemprop="url">hello</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-12-07 17:16:33" itemprop="dateCreated datePublished" datetime="2021-12-07T17:16:33+08:00">2021-12-07</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>0</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
       
     </div>
 
@@ -380,9 +325,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
