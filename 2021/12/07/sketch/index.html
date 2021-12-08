@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png">
 <meta property="article:published_time" content="2021-12-07T09:18:55.000Z">
-<meta property="article:modified_time" content="2021-12-08T08:01:27.480Z">
+<meta property="article:modified_time" content="2021-12-08T08:05:28.998Z">
 <meta property="article:author" content="Janene">
 <meta property="article:tag" content="sketch">
 <meta name="twitter:card" content="summary">
@@ -198,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-08 16:01:27" itemprop="dateModified" datetime="2021-12-08T16:01:27+08:00">2021-12-08</time>
+                <time title="Modified: 2021-12-08 16:05:28" itemprop="dateModified" datetime="2021-12-08T16:05:28+08:00">2021-12-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -243,12 +243,14 @@
 </li>
 <li><p>设一个集合的基数为$n$，此集合所有元素通过$H$哈希到bitmap中，如果某一个元素被哈希到第k个比特并且第k个比特为0，则将其置为1。</p>
 </li>
-<li><p>当集合所有元素哈希完成后，设bitmap中还有$u$个bit为0。</p>
-</li>
+<li>当集合所有元素哈希完成后，设bitmap中还有$u$个bit为0。</li>
 </ul>
 <p><img src="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png" alt="Linear Counting"></p>
-<p>我们可以近似认为$n$足够大的时候，哈希的结果服从均匀分布，<br>$$<br>E(U_n)= me^{\frac{-n}{m}}<br>$$</p>
-<p>那么最后设集合基数为n的最大似然估计为:<br>$$<br>-m*ln(\frac{u}{m})<br>$$<br>LC需要的空间只有传统bitmap的$\frac{1}{10}$, 从渐进的角度看空间复杂度仍为$O(N_{max})$</p>
+<p>我们可以近似认为$n$足够大的时候，哈希的结果服从均匀分布，</p>
+<script type="math/tex; mode=display">
+E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似然估计为:</p>
+<script type="math/tex; mode=display">
+-m*ln(\frac{u}{m})</script><p>LC需要的空间只有传统bitmap的$\frac{1}{10}$, 从渐进的角度看空间复杂度仍为$O(N_{max})$</p>
 <blockquote>
 <p>论文：- Whang, Kyu-Young, Brad T. Vander-Zanden, and Howard M. Taylor. “A linear-time probabilistic counting algorithm for database applications.” ACM Transactions on Database Systems (TODS) 15.2 (1990): 208-229.</p>
 </blockquote>
@@ -260,7 +262,7 @@
 </blockquote>
 <h3 id="LogLog"><a href="#LogLog" class="headerlink" title="LogLog"></a><strong>LogLog</strong></h3><p>顾名思义，就是利用$loglogn$的空间来实现估测基数的算法。可以说基本就是FM的优化，我们记录$p(x)$表示对于想哈希之后末尾有$p(x)$个0，那么其实我们只需要记录$max(p(x))$即可，因此该空间为$loglogn$的</p>
 <p>那么同样，我们可以采用将数据随机分桶统计，通过求max的平均值来估测</p>
-<p>HyperLogLog算法使用调和平均值将它们组合成原始基数的估计值（hyperloglog demo:<a target="_blank" rel="noopener" href="http://content.research.neustar.biz/blog/hll.html%EF%BC%89">http://content.research.neustar.biz/blog/hll.html）</a></p>
+<p>HyperLogLog算法使用调和平均值将它们组合成原始基数的估计值（hyperloglog demo:<a target="_blank" rel="noopener" href="http://content.research.neustar.biz/blog/hll.html）">http://content.research.neustar.biz/blog/hll.html）</a></p>
 <blockquote>
 <p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/271186546">https://zhuanlan.zhihu.com/p/271186546</a></p>
 <p>基数估计算法（包括HLL、AC）</p>
@@ -469,6 +471,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
