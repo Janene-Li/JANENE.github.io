@@ -20,22 +20,26 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="各种data structure慢慢总结。。。">
+  <meta name="description" content="adaptive threshold&amp; network-wide heavy hitter detection">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sketch">
-<meta property="og:url" content="http://example.com/2021/12/07/sketch/index.html">
+<meta property="og:title" content="Carpe">
+<meta property="og:url" content="http://example.com/2021/12/31/Carpe/index.html">
 <meta property="og:site_name" content="AHHHHHHA">
-<meta property="og:description" content="各种data structure慢慢总结。。。">
+<meta property="og:description" content="adaptive threshold&amp; network-wide heavy hitter detection">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png">
-<meta property="article:published_time" content="2021-12-07T09:18:55.000Z">
-<meta property="article:modified_time" content="2021-12-08T08:24:37.285Z">
+<meta property="og:image" content="http://example.com/2021/12/31/Carpe/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20211231151604242.png">
+<meta property="og:image" content="http://example.com/2021/12/31/Carpe/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20211231151755525.png">
+<meta property="og:image" content="http://example.com/2021/12/31/Carpe/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20211231153610473.png">
+<meta property="og:image" content="http://example.com/2021/12/31/Carpe/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20211231154220116.png">
+<meta property="og:image" content="http://example.com/2021/12/31/Carpe/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20211231155306189.png">
+<meta property="article:published_time" content="2021-12-31T07:59:03.000Z">
+<meta property="article:modified_time" content="2021-12-31T08:00:27.270Z">
 <meta property="article:author" content="Janene">
-<meta property="article:tag" content="sketch">
+<meta property="article:tag" content="heavy hitter">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png">
+<meta name="twitter:image" content="http://example.com/2021/12/31/Carpe/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20211231151604242.png">
 
-<link rel="canonical" href="http://example.com/2021/12/07/sketch/">
+<link rel="canonical" href="http://example.com/2021/12/31/Carpe/">
 
 
 <script id="page-configurations">
@@ -48,7 +52,7 @@
   };
 </script>
 
-  <title>sketch | AHHHHHHA</title>
+  <title>Carpe | AHHHHHHA</title>
   
 
 
@@ -168,7 +172,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/07/sketch/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/31/Carpe/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +185,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          sketch
+          Carpe
         </h1>
 
         <div class="post-meta">
@@ -190,23 +194,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-12-07 17:18:55" itemprop="dateCreated datePublished" datetime="2021-12-07T17:18:55+08:00">2021-12-07</time>
+              <time title="Created: 2021-12-31 15:59:03 / Modified: 16:00:27" itemprop="dateCreated datePublished" datetime="2021-12-31T15:59:03+08:00">2021-12-31</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-08 16:24:37" itemprop="dateModified" datetime="2021-12-08T16:24:37+08:00">2021-12-08</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/summary/" itemprop="url" rel="index"><span itemprop="name">summary</span></a>
+                  <a href="/categories/paper/" itemprop="url" rel="index"><span itemprop="name">paper</span></a>
                 </span>
             </span>
 
@@ -216,16 +214,16 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.5k</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
-            <div class="post-description">各种data structure慢慢总结。。。</div>
+            <div class="post-description">adaptive threshold& network-wide heavy hitter detection</div>
 
         </div>
       </header>
@@ -236,40 +234,133 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1-基数估计算法"><a href="#1-基数估计算法" class="headerlink" title="1. 基数估计算法"></a>1. 基数估计算法</h1><h2 id="Linear-counting"><a href="#Linear-counting" class="headerlink" title="Linear counting"></a>Linear counting</h2><p>该算法用于估测数据基数，也就是说有多少不同元素，采用方法非常简单，将数据哈希到长度为m的数组，访问到的位置就置为1</p>
-<ul>
-<li><p>设有一哈希函数$H$，其哈希结果空间有m个值（最小值0，最大值m-1），且哈希结果均匀分布。</p>
+        <h1 id="Carpe"><a href="#Carpe" class="headerlink" title="Carpe"></a>Carpe</h1><h2 id="0-situation"><a href="#0-situation" class="headerlink" title="0. situation"></a>0. situation</h2><ul>
+<li><p>Prolifration of loT and moblie devices——&gt;a substential DDoS</p>
 </li>
-<li><p>使用一个长度为$m$的bitmap，每个bit为一个bucket（初始化为0）。</p>
+<li><p>Network wide heavy hitters</p>
 </li>
-<li><p>设一个集合的基数为$n$，此集合所有元素通过$H$哈希到bitmap中，如果某一个元素被哈希到第k个比特并且第k个比特为0，则将其置为1。</p>
+<li><p>Should aggregate the information observed at each switch to identify flows whose exceeds a global threshold</p>
 </li>
-<li>当集合所有元素哈希完成后，设bitmap中还有$u$个bit为0。</li>
 </ul>
-<p><img src="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png" alt="Linear Counting"></p>
-<p>我们可以近似认为$n$足够大的时候，哈希的结果服从均匀分布，</p>
-<script type="math/tex; mode=display">
-E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似然估计为:</p>
-<script type="math/tex; mode=display">
--m*ln(\frac{u}{m})</script><p>LC需要的空间只有传统bitmap的$\frac{1}{10}$, 从渐进的角度看空间复杂度仍为$O(N_{max})$</p>
-<p>详细推导过程见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wbin233/article/details/78752597">https://blog.csdn.net/wbin233/article/details/78752597</a></p>
-<blockquote>
-<p>论文：- Whang, Kyu-Young, Brad T. Vander-Zanden, and Howard M. Taylor. “A linear-time probabilistic counting algorithm for database applications.” ACM Transactions on Database Systems (TODS) 15.2 (1990): 208-229.</p>
-</blockquote>
-<h3 id="FM-Sketch（PCSA）"><a href="#FM-Sketch（PCSA）" class="headerlink" title="FM Sketch（PCSA）"></a><strong>FM Sketch</strong>（PCSA）</h3><p>该算法是基于概率来估计基数，首先我们根据数据随机情况观察二进制的性质，可以发现末尾有k个连续0的情况出现次数是按比例缩小的，因此我们基于这个观察得出估计方法</p>
-<p>首先我们随机一个哈希函数将数据映射到一个二进制长度为L的空间内（即 $[0,2^L-1]$），我们记录BITMAP来标记是否出现一个数后尾恰好有连续i个0，这样显然根据访问的概率就可以估计数据基数，我们取在bitmap中第一个为0的位置，即我们没有映射后末尾恰好有$k$个0的key，因此我们用$k$来近似$logn$，显然这样数据是偏小的，论文根据计算添加了偏差参数$E(k)=log\phi n, \phi = 0.77351…$</p>
-<p>显然这样还是不太准确，于是就采用了多次哈希的方式，我们利用得到的$k$的均值来进行估计</p>
-<blockquote>
-<p>论文：Flajolet, Philippe, and G. Nigel Martin. “Probabilistic counting algorithms for data base applications.” <em>Journal of computer and system sciences</em> 31.2 (1985): 182-209.</p>
-</blockquote>
-<h3 id="LogLog"><a href="#LogLog" class="headerlink" title="LogLog"></a><strong>LogLog</strong></h3><p>顾名思义，就是利用$loglogn$的空间来实现估测基数的算法。可以说基本就是FM的优化，我们记录$p(x)$表示对于想哈希之后末尾有$p(x)$个0，那么其实我们只需要记录$max(p(x))$即可，因此该空间为$loglogn$的</p>
-<p>那么同样，我们可以采用将数据随机分桶统计，通过求max的平均值来估测</p>
-<p>HyperLogLog算法使用调和平均值将它们组合成原始基数的估计值</p>
-<blockquote>
-<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/271186546">https://zhuanlan.zhihu.com/p/271186546</a></p>
-<p>hyperloglog demo:<a target="_blank" rel="noopener" href="http://content.research.neustar.biz/blog/hll.html）">http://content.research.neustar.biz/blog/hll.html）</a></p>
-<p>基数估计算法（包括HLL、AC）</p>
-</blockquote>
+<h2 id="1-goal"><a href="#1-goal" class="headerlink" title="1. goal"></a>1. goal</h2><ul>
+<li>To identify the elephants flows that exceed a global threshold </li>
+<li>To estimate their packet counts</li>
+</ul>
+<h2 id="2-1-protocol"><a href="#2-1-protocol" class="headerlink" title="2.1 protocol"></a>2.1 protocol</h2><ul>
+<li><p><strong>Sampling rate:</strong> r = 1/k   We consider flows of fewer than 5 packets as mice, sampling rate is 1/5</p>
+</li>
+<li><p><strong>Local threshold:</strong> 𝜏 &gt; 1/𝑠， 𝜏= 𝜖T/k</p>
+</li>
+<li><p><strong>Global threshold:</strong> R =kr/𝜖 message received is netwide heavy hitter</p>
+</li>
+</ul>
+<h2 id="2-2-Prohibility-report"><a href="#2-2-Prohibility-report" class="headerlink" title="2.2 Prohibility report"></a>2.2 Prohibility report</h2><ul>
+<li>交换机数量增加，准确率会下降<ul>
+<li>别的没报告的交换机会有剩下的数据包让中心报告器估算的交换机数量不准，因为有”blind spot“</li>
+<li>message数会随着网络中交换机的数量增长</li>
+</ul>
+</li>
+<li>降低本地阈值𝜏到很小，会增加message数量</li>
+<li>使用概率报告，可以让误差边界与交换机数量无关，但会需要保存无限状态和大量计算</li>
+</ul>
+<h2 id="2-3-Spatial-locality"><a href="#2-3-Spatial-locality" class="headerlink" title="2.3 Spatial locality"></a>2.3 Spatial locality</h2><ul>
+<li><p>前面的protocol会假设所有交换机都是平等的</p>
+</li>
+<li><p>但是，大多数流量具有<strong>局部空间性</strong>：某一个流只有部分交换机观察得到</p>
+</li>
+<li><p>这会导致更低的本地阈值，和更多的message数</p>
+</li>
+<li><p>引入locality parameters 参数lf，代表the number of switches that denote flow f</p>
+<ul>
+<li><p>Sampling rate: rf = 1/k We consider flows of fewer than s packets as mice, sampling rate is 1/s</p>
+</li>
+<li><p>Local threshold: 𝜏f &gt; 1/𝑠， 𝜏f= 𝜖T/lf</p>
+</li>
+<li><p>Global threshold: Rf =lf*rf/𝜖 message received is netwide-heavy hitter</p>
+</li>
+</ul>
+</li>
+<li><p>但是locality of switch也是会因为failures和routing updates而改变</p>
+</li>
+<li><p>每个交换机一直都知道flows expects to observe</p>
+</li>
+<li><p>当遇到unexpected flow会给coordinator发送”HELLO”信息</p>
+</li>
+<li><p>coordinator拿到f和s的信息，coordinator分别计算𝑟𝑓, 𝜏𝑓</p>
+</li>
+<li><p>给所有观察到f的交换机修改参数（为了避免瞬时改变，仅当观察到流f的<strong>交换机集合Sf</strong>变成两倍之后，再更新参数）</p>
+</li>
+</ul>
+<h2 id="2-4-data-structure"><a href="#2-4-data-structure" class="headerlink" title="2.4 data structure"></a>2.4 data structure</h2><ul>
+<li>之前的原型需要在可编程交换机上存储每流阈值，但是内存太小</li>
+<li>因此，需要解耦：数据包计数粒度， locality must obseved的粒度</li>
+<li>存储报告参数(coarser granularity)： at the granularity of goups of related flows</li>
+<li>存储计数器(finer granularity)： for the sampled flow</li>
+<li>有个小问题：每个flip的浮点数运算<ul>
+<li>将浮点值表示成一个无符号整数(0 &lt; 𝑖 ≤ 1.0)，然后使用packet header fields计算32bit哈希值，检查是否比2^32*i小</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-summary"><a href="#3-summary" class="headerlink" title="3. summary"></a>3. summary</h2><ol>
+<li><p><strong>flip1（based on sampling probability）</strong>: 交换机以1/s的采样率采样，过滤掉mice, 如果采样那么flip1 = true</p>
+</li>
+<li><p>如果flip1==true, 读取阈值+概率表<img src="/2021/12/31/Carpe/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20211231151604242.png" alt="image-20211231151604242"></p>
+<ul>
+<li><p>如果是expected flow，获取流对应的阈值和概率储存在register</p>
+</li>
+<li><p>如果是 unexpected flow，给coordinator发送“HELLO”信息， coordinator拿到f和s的信息，coordinator更新𝑙𝑓, 计算𝑟𝑓和𝜏𝑓给发送”HELLO“的交换机。（we update the locality parameters for a flow only when the size of 𝑆𝑓 doubles. 𝑆𝑓 是observe 流f的交换机集合）<img src="/2021/12/31/Carpe/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20211231151755525.png" alt="image-20211231151755525"></p>
+</li>
+</ul>
+</li>
+<li><p>检查在不在data structure D中</p>
+<ol>
+<li>如果在，counter +1</li>
+<li>如果不在，counter = 1/s</li>
+</ol>
+</li>
+<li><p><strong>flip2（based on reporting probability）</strong>: 如果flip2 == true, 交换机reset counter，并report给controller，controller修改计数table<img src="/2021/12/31/Carpe/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20211231153610473.png" alt="image-20211231153610473"></p>
+</li>
+</ol>
+<h2 id="experiment"><a href="#experiment" class="headerlink" title="experiment"></a>experiment</h2><ul>
+<li><p><strong>flow key:</strong> 五元组</p>
+</li>
+<li><p><strong>time window:</strong> Duaring a time window of 5 seconds, 5 million packets, 270K unique flows</p>
+</li>
+<li><p><strong>switch num:</strong> K = 10 超过10个会导致更小不真实的workloads</p>
+</li>
+<li><p><strong>local switch num:</strong> </p>
+<ul>
+<li><p>L = 2 每个流只出现在两个交换机上</p>
+</li>
+<li><p>单源入口的primary /alternate relationship, p = 0.95</p>
+</li>
+</ul>
+</li>
+<li><p><strong>global threshold:</strong> T 全局阈值99.99百分位</p>
+</li>
+<li><p><strong>Sampling rate:</strong> 0.001(这个速率下通信)</p>
+</li>
+<li><p>an approximation factor of 𝜖 = 0.1</p>
+</li>
+<li><p>评价指标： F1</p>
+</li>
+</ul>
+<h2 id="question"><a href="#question" class="headerlink" title="question"></a>question</h2><ul>
+<li>还是有个问题没有解决：<ul>
+<li>f3在B交换机20个报告一次，报告了4次（80个包），剩下19还差一个所以没有report;</li>
+<li>f3在A交换机上被当作mice过滤掉了，</li>
+<li>实际上全局来看f3是一个需要report的elephant</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2021/12/31/Carpe/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20211231154220116.png" alt="image-20211231154220116"></p>
+<ul>
+<li>在现有的改进策略下。。想一想<ul>
+<li><img src="/2021/12/31/Carpe/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20211231155306189.png" alt="image-20211231155306189"></li>
+</ul>
+</li>
+</ul>
+<p>这个问题文中给的解释就是因为Carpe generates a report with probability each time packets are observed for a sampled flow, allowing Carpe to  achieve an error bound that is independent of the number of switches， 就是说Carpe controller收到的report数量得到的某一个流的估计，已经和data plane有多少个交换机无关了。（参考论文 Algorithms for Distributed Functional Monitoring ）</p>
 
     </div>
 
@@ -279,7 +370,7 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/sketch/" rel="tag"># sketch</a>
+              <a href="/tags/heavy-hitter/" rel="tag"># heavy hitter</a>
           </div>
 
         
@@ -287,11 +378,11 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/12/15/Spreadskech/" rel="next" title="Spreadskech">
-      Spreadskech <i class="fa fa-chevron-right"></i>
+    <a href="/2021/12/15/Spreadskech/" rel="prev" title="Spreadskech">
+      <i class="fa fa-chevron-left"></i> Spreadskech
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -350,7 +441,7 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%9F%BA%E6%95%B0%E4%BC%B0%E8%AE%A1%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">1. 基数估计算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-counting"><span class="nav-number">1.1.</span> <span class="nav-text">Linear counting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FM-Sketch%EF%BC%88PCSA%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">FM Sketch（PCSA）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LogLog"><span class="nav-number">1.1.2.</span> <span class="nav-text">LogLog</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Carpe"><span class="nav-number">1.</span> <span class="nav-text">Carpe</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-situation"><span class="nav-number">1.1.</span> <span class="nav-text">0. situation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-goal"><span class="nav-number">1.2.</span> <span class="nav-text">1. goal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-protocol"><span class="nav-number">1.3.</span> <span class="nav-text">2.1 protocol</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Prohibility-report"><span class="nav-number">1.4.</span> <span class="nav-text">2.2 Prohibility report</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Spatial-locality"><span class="nav-number">1.5.</span> <span class="nav-text">2.3 Spatial locality</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-data-structure"><span class="nav-number">1.6.</span> <span class="nav-text">2.4 data structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-summary"><span class="nav-number">1.7.</span> <span class="nav-text">3. summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experiment"><span class="nav-number">1.8.</span> <span class="nav-text">experiment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question"><span class="nav-number">1.9.</span> <span class="nav-text">question</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
