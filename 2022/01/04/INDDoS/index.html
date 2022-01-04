@@ -20,22 +20,27 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="各种data structure慢慢总结。。。">
+  <meta name="description" content="CM(dst)+bitmap(src)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sketch">
-<meta property="og:url" content="http://example.com/2021/12/07/sketch/index.html">
+<meta property="og:title" content="INDDoS">
+<meta property="og:url" content="http://example.com/2022/01/04/INDDoS/index.html">
 <meta property="og:site_name" content="AHHHHHHA">
-<meta property="og:description" content="各种data structure慢慢总结。。。">
+<meta property="og:description" content="CM(dst)+bitmap(src)">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png">
-<meta property="article:published_time" content="2021-12-07T09:18:55.000Z">
-<meta property="article:modified_time" content="2021-12-08T08:24:37.285Z">
+<meta property="og:image" content="http://example.com/2022/01/04/INDDoS/image-20220104155725585.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INDDoS/image-20220104160022250.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INDDoS/image-20220104154638697.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INDDoS/image-20220104160148178.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INDDoS/image-20220104160409911.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INDDoS/image-20220104154652342.png">
+<meta property="article:published_time" content="2022-01-04T07:04:52.000Z">
+<meta property="article:modified_time" content="2022-01-04T11:13:42.460Z">
 <meta property="article:author" content="Janene">
-<meta property="article:tag" content="sketch">
+<meta property="article:tag" content="DDoS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png">
+<meta name="twitter:image" content="http://example.com/2022/01/04/INDDoS/image-20220104155725585.png">
 
-<link rel="canonical" href="http://example.com/2021/12/07/sketch/">
+<link rel="canonical" href="http://example.com/2022/01/04/INDDoS/">
 
 
 <script id="page-configurations">
@@ -48,7 +53,7 @@
   };
 </script>
 
-  <title>sketch | AHHHHHHA</title>
+  <title>INDDoS | AHHHHHHA</title>
   
 
 
@@ -168,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/07/sketch/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/04/INDDoS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          sketch
+          INDDoS
         </h1>
 
         <div class="post-meta">
@@ -190,23 +195,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-12-07 17:18:55" itemprop="dateCreated datePublished" datetime="2021-12-07T17:18:55+08:00">2021-12-07</time>
+              <time title="Created: 2022-01-04 15:04:52 / Modified: 19:13:42" itemprop="dateCreated datePublished" datetime="2022-01-04T15:04:52+08:00">2022-01-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-08 16:24:37" itemprop="dateModified" datetime="2021-12-08T16:24:37+08:00">2021-12-08</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/summary/" itemprop="url" rel="index"><span itemprop="name">summary</span></a>
+                  <a href="/categories/paper/" itemprop="url" rel="index"><span itemprop="name">paper</span></a>
                 </span>
             </span>
 
@@ -216,7 +215,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.5k</span>
+              <span>986</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -225,7 +224,7 @@
                 <span class="post-meta-item-text">Reading time &asymp;</span>
               <span>1 mins.</span>
             </span>
-            <div class="post-description">各种data structure慢慢总结。。。</div>
+            <div class="post-description">CM(dst)+bitmap(src)</div>
 
         </div>
       </header>
@@ -236,40 +235,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1-基数估计算法"><a href="#1-基数估计算法" class="headerlink" title="1. 基数估计算法"></a>1. 基数估计算法</h1><h2 id="Linear-counting"><a href="#Linear-counting" class="headerlink" title="Linear counting"></a>Linear counting</h2><p>该算法用于估测数据基数，也就是说有多少不同元素，采用方法非常简单，将数据哈希到长度为m的数组，访问到的位置就置为1</p>
+        <h1 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h1><p>INDDoS is a simple volumetric DDoS victim identification strategy built on top of <strong>==BACON Sketch==</strong> to identify the destination IPs contacted by a number of source IPs greater than a threshold, in a given time interval, completely in the data plane.</p>
+<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><p>given</p>
+<p><img src="/2022/01/04/INDDoS/image-20220104155725585.png" alt="image-20220104155725585" style="zoom:50%;"></p>
+<p>estimate </p>
 <ul>
-<li><p>设有一哈希函数$H$，其哈希结果空间有m个值（最小值0，最大值m-1），且哈希结果均匀分布。</p>
+<li><p>the number of flows(identified by different $key<em>{src}$ keys) that contact the destination host identified by $key</em>{dst}$ in Tint</p>
+<p><img src="/2022/01/04/INDDoS/image-20220104160022250.png" alt="image-20220104160022250" style="zoom:50%;"></p>
 </li>
-<li><p>使用一个长度为$m$的bitmap，每个bit为一个bucket（初始化为0）。</p>
-</li>
-<li><p>设一个集合的基数为$n$，此集合所有元素通过$H$哈希到bitmap中，如果某一个元素被哈希到第k个比特并且第k个比特为0，则将其置为1。</p>
-</li>
-<li>当集合所有元素哈希完成后，设bitmap中还有$u$个bit为0。</li>
 </ul>
-<p><img src="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png" alt="Linear Counting"></p>
-<p>我们可以近似认为$n$足够大的时候，哈希的结果服从均匀分布，</p>
-<script type="math/tex; mode=display">
-E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似然估计为:</p>
-<script type="math/tex; mode=display">
--m*ln(\frac{u}{m})</script><p>LC需要的空间只有传统bitmap的$\frac{1}{10}$, 从渐进的角度看空间复杂度仍为$O(N_{max})$</p>
-<p>详细推导过程见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wbin233/article/details/78752597">https://blog.csdn.net/wbin233/article/details/78752597</a></p>
-<blockquote>
-<p>论文：- Whang, Kyu-Young, Brad T. Vander-Zanden, and Howard M. Taylor. “A linear-time probabilistic counting algorithm for database applications.” ACM Transactions on Database Systems (TODS) 15.2 (1990): 208-229.</p>
-</blockquote>
-<h3 id="FM-Sketch（PCSA）"><a href="#FM-Sketch（PCSA）" class="headerlink" title="FM Sketch（PCSA）"></a><strong>FM Sketch</strong>（PCSA）</h3><p>该算法是基于概率来估计基数，首先我们根据数据随机情况观察二进制的性质，可以发现末尾有k个连续0的情况出现次数是按比例缩小的，因此我们基于这个观察得出估计方法</p>
-<p>首先我们随机一个哈希函数将数据映射到一个二进制长度为L的空间内（即 $[0,2^L-1]$），我们记录BITMAP来标记是否出现一个数后尾恰好有连续i个0，这样显然根据访问的概率就可以估计数据基数，我们取在bitmap中第一个为0的位置，即我们没有映射后末尾恰好有$k$个0的key，因此我们用$k$来近似$logn$，显然这样数据是偏小的，论文根据计算添加了偏差参数$E(k)=log\phi n, \phi = 0.77351…$</p>
-<p>显然这样还是不太准确，于是就采用了多次哈希的方式，我们利用得到的$k$的均值来进行估计</p>
-<blockquote>
-<p>论文：Flajolet, Philippe, and G. Nigel Martin. “Probabilistic counting algorithms for data base applications.” <em>Journal of computer and system sciences</em> 31.2 (1985): 182-209.</p>
-</blockquote>
-<h3 id="LogLog"><a href="#LogLog" class="headerlink" title="LogLog"></a><strong>LogLog</strong></h3><p>顾名思义，就是利用$loglogn$的空间来实现估测基数的算法。可以说基本就是FM的优化，我们记录$p(x)$表示对于想哈希之后末尾有$p(x)$个0，那么其实我们只需要记录$max(p(x))$即可，因此该空间为$loglogn$的</p>
-<p>那么同样，我们可以采用将数据随机分桶统计，通过求max的平均值来估测</p>
-<p>HyperLogLog算法使用调和平均值将它们组合成原始基数的估计值</p>
-<blockquote>
-<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/271186546">https://zhuanlan.zhihu.com/p/271186546</a></p>
-<p>hyperloglog demo:<a target="_blank" rel="noopener" href="http://content.research.neustar.biz/blog/hll.html）">http://content.research.neustar.biz/blog/hll.html）</a></p>
-<p>基数估计算法（包括HLL、AC）</p>
-</blockquote>
+<p>​    </p>
+<h1 id="BACONsketch"><a href="#BACONsketch" class="headerlink" title="BACONsketch"></a>BACONsketch</h1><h2 id="data-structure"><a href="#data-structure" class="headerlink" title="data structure"></a>data structure</h2><p><img src="/2022/01/04/INDDoS/image-20220104154638697.png" alt="image-20220104154638697" style="zoom: 33%;"></p>
+<h2 id="update-amp-query-algorithm"><a href="#update-amp-query-algorithm" class="headerlink" title="update&amp;query algorithm"></a>update&amp;query algorithm</h2><p><img src="/2022/01/04/INDDoS/image-20220104160148178.png" alt="image-20220104160148178"></p>
+<h2 id="BACON-for-DDoS"><a href="#BACON-for-DDoS" class="headerlink" title="BACON for DDoS"></a>BACON for DDoS</h2><p>given</p>
+<p><img src="/2022/01/04/INDDoS/image-20220104160409911.png" alt="image-20220104160409911" style="zoom:50%;"></p>
+<p>return </p>
+<ul>
+<li>all destinations $key<em>{dst}$(DDoS victims), that satisfy $E</em>{dst}$&gt;$\theta$ within time interval $Tint$ </li>
+</ul>
+<h2 id="implemention"><a href="#implemention" class="headerlink" title="implemention"></a>implemention</h2><p>实际实现中使用一个小的CMsketch 直接储存BACON中每个bucket中1的个数，查询的时候查询这个小CMsketch即可。</p>
+<p><img src="/2022/01/04/INDDoS/image-20220104154652342.png" alt="image-20220104154652342" style="zoom:50%;"></p>
+<h1 id="related-work"><a href="#related-work" class="headerlink" title="related work"></a>related work</h1><h2 id="spreadsketch"><a href="#spreadsketch" class="headerlink" title="spreadsketch"></a>spreadsketch</h2><p>数据结构：</p>
+<ul>
+<li>combination of Multiresolution Bitmap and Count-min Sketch</li>
+</ul>
+<p>实现：</p>
+<ul>
+<li>Multiresolution Bitmap 需要log计算来估计cardinality，P4不支持log计算，只能在bmv2上实现</li>
+<li>对同一个metadata运算2次，在硬件中不能有多余两次arithmetic operations。但是这里需要多余2次</li>
+</ul>
+<h2 id="entropy-based-DDoS-detection"><a href="#entropy-based-DDoS-detection" class="headerlink" title="entropy based DDoS detection"></a>entropy based DDoS detection</h2><ul>
+<li>基于熵的DDoS检测只能alarm，而不能识别受害者。</li>
+<li>本文基于flow的DDoS检测不仅可以alarm，还能知道手滑这，减轻对目标节点影响</li>
+</ul>
+<h1 id="experiment"><a href="#experiment" class="headerlink" title="experiment"></a>experiment</h1><p>on Tofino</p>
+<h1 id="💡emm"><a href="#💡emm" class="headerlink" title="💡emm"></a>💡emm</h1><ul>
+<li><p>这篇文章灵感可能来源于spread sketch，只是把里面的复杂bitmap换成了direct bitmap</p>
+</li>
+<li><p>里面还介绍了P4结构来水页数</p>
+</li>
+<li>还是未发表工作</li>
+</ul>
 
     </div>
 
@@ -279,7 +285,7 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/sketch/" rel="tag"># sketch</a>
+              <a href="/tags/DDoS/" rel="tag"># DDoS</a>
           </div>
 
         
@@ -287,10 +293,13 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/12/15/Spreadskech/" rel="next" title="Spreadskech">
-      Spreadskech <i class="fa fa-chevron-right"></i>
+    <a href="/2022/01/04/Tracking-Normalized-Network-Traffic-Entropy-to-Detect-DDoS-Attacks-in-P4/" rel="prev" title="Tracking Normalized Network Traffic Entropy to Detect DDoS Attacks in P4">
+      <i class="fa fa-chevron-left"></i> Tracking Normalized Network Traffic Entropy to Detect DDoS Attacks in P4
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/04/INVEST/" rel="next" title="INVEST">
+      INVEST <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -350,7 +359,7 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%9F%BA%E6%95%B0%E4%BC%B0%E8%AE%A1%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">1. 基数估计算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-counting"><span class="nav-number">1.1.</span> <span class="nav-text">Linear counting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FM-Sketch%EF%BC%88PCSA%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">FM Sketch（PCSA）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LogLog"><span class="nav-number">1.1.2.</span> <span class="nav-text">LogLog</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#abstract"><span class="nav-number">1.</span> <span class="nav-text">abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#problem"><span class="nav-number">2.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BACONsketch"><span class="nav-number">3.</span> <span class="nav-text">BACONsketch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#data-structure"><span class="nav-number">3.1.</span> <span class="nav-text">data structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#update-amp-query-algorithm"><span class="nav-number">3.2.</span> <span class="nav-text">update&amp;query algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BACON-for-DDoS"><span class="nav-number">3.3.</span> <span class="nav-text">BACON for DDoS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#implemention"><span class="nav-number">3.4.</span> <span class="nav-text">implemention</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#related-work"><span class="nav-number">4.</span> <span class="nav-text">related work</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#spreadsketch"><span class="nav-number">4.1.</span> <span class="nav-text">spreadsketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#entropy-based-DDoS-detection"><span class="nav-number">4.2.</span> <span class="nav-text">entropy based DDoS detection</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#experiment"><span class="nav-number">5.</span> <span class="nav-text">experiment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%92%A1emm"><span class="nav-number">6.</span> <span class="nav-text">💡emm</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
