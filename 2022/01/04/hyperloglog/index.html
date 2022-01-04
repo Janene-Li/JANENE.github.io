@@ -27,15 +27,15 @@
 <meta property="og:site_name" content="AHHHHHHA">
 <meta property="og:description" content="由简单的抛硬币试验可以引导出如此的震撼的算法，数学之强大。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/01/04/hyperloglog/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104103656766.png">
-<meta property="og:image" content="http://example.com/2022/01/04/hyperloglog/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104103910447.png">
-<meta property="og:image" content="http://example.com/2022/01/04/hyperloglog/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104104249450.png">
+<meta property="og:image" content="http://example.com/2022/01/04/hyperloglog/image-20220104103656766.png">
+<meta property="og:image" content="http://example.com/2022/01/04/hyperloglog/image-20220104103910447.png">
+<meta property="og:image" content="http://example.com/2022/01/04/hyperloglog/image-20220104104249450.png">
 <meta property="article:published_time" content="2022-01-04T02:30:08.000Z">
-<meta property="article:modified_time" content="2022-01-04T03:19:04.613Z">
+<meta property="article:modified_time" content="2022-01-04T03:21:22.139Z">
 <meta property="article:author" content="Janene">
 <meta property="article:tag" content="sketch">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/01/04/hyperloglog/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104103656766.png">
+<meta name="twitter:image" content="http://example.com/2022/01/04/hyperloglog/image-20220104103656766.png">
 
 <link rel="canonical" href="http://example.com/2022/01/04/hyperloglog/">
 
@@ -194,7 +194,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-01-04 10:30:08 / Modified: 11:19:04" itemprop="dateCreated datePublished" datetime="2022-01-04T10:30:08+08:00">2022-01-04</time>
+              <time title="Created: 2022-01-04 10:30:08 / Modified: 11:21:22" itemprop="dateCreated datePublished" datetime="2022-01-04T10:30:08+08:00">2022-01-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,7 +247,7 @@
 <p>假设上面例子中实验组数共3组，那么 k_max = 6，最终 n=3，我们放进估算公式中去，明显： 3 ≠ 2^6 。也即是说，当试验次数很小的时候，这种估算方法的误差是很大的。</p>
 <h1 id="估算优化"><a href="#估算优化" class="headerlink" title="估算优化"></a>估算优化</h1><p>在上面的3组例子中，我们称为一轮的估算。如果只是进行一轮的话，当 n 足够大的时候，估算的误差率会相对减少，但仍然不够小。</p>
 <p>那么是否可以进行多轮呢？例如进行 100 轮或者更多轮次的试验，然后再取每轮的 k_max，再取平均数，即: <code>k_mx/100</code>。最终再估算出 n。下面是<code>LogLog</code>的估算公式：</p>
-<p><img src="/2022/01/04/hyperloglog/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104103656766.png" alt="image-20220104103656766" style="zoom: 67%;"></p>
+<p><img src="/2022/01/04/hyperloglog/image-20220104103656766.png" alt="image-20220104103656766" style="zoom: 67%;"></p>
 <ul>
 <li><p>上面公式的<code>DVLL</code>对应的就是<code>n</code>，</p>
 </li>
@@ -261,7 +261,7 @@
 <p>这种通过<strong>增加试验轮次</strong>，再取<code>k_max</code>平均数的算法优化就是<code>LogLog</code>的做法。</p>
 <p>而 <code>HyperLogLog</code>和<code>LogLog</code>的区别就是，它采用的不是<code>平均数</code>，而是<code>调和平均数</code>。<code>调和平均数</code>比<code>平均数</code>的好处就是不容易受到大的数值的影响。下面举个例子：</p>
 <p>求平均工资: A的是1000/月，B的30000/月。采用平均数的方式就是： (1000 + 30000) / 2 = 15500, 采用调和平均数的方式就是： 2/(1/1000 + 1/30000) ≈ 1935.484, 明显地，<code>调和平均数</code>比<code>平均数</code>的效果是要更好的。下面是<code>调和平均数</code>的计算方式，<code>∑</code> 是累加符号</p>
-<p><img src="/2022/01/04/hyperloglog/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104103910447.png" alt="image-20220104103910447" style="zoom:50%;"></p>
+<p><img src="/2022/01/04/hyperloglog/image-20220104103910447.png" alt="image-20220104103910447" style="zoom:50%;"></p>
 <h1 id="扯上关系"><a href="#扯上关系" class="headerlink" title="扯上关系"></a>扯上关系</h1><p>上面的内容我们已经知道，在抛硬币的例子中，可以通过一次伯努利试验中出现的<code>k_max</code>来估算<code>n</code>。</p>
 <p>那么这种估算方法如何和下面问题有所关联呢？</p>
 <p>例如： 统计 APP或网页 的一个页面，每天有多少用户点击进入的次数。同一个用户的反复点击进入记为 1 次，<code>HyperLogLog</code>是这样做的。对于输入的数据，进行下面几个步骤：</p>
@@ -291,7 +291,7 @@
 <p>上面例子中，计算出桶号后，剩下的<code>比特串</code>是：10010110000，从低位到高位看，第一次出现 1 的位置是 5 。也就是说，此时第3个桶，第3轮的试验中，<code>k_max = 5</code>。5 对应的二进制是：101，又因为每个桶有 p 个比特位。当 p&gt;=3 时，便可以将 101 存进去。</p>
 <p>模仿上面的流程，多个不同的用户 id，就被分散到不同的桶中去了，且每个桶有其 k_max。然后当要统计出 <code>main</code> 页面有多少用户点击量的时候，就是一次估算。最终结合所有桶中的 k_max，代入估算公式，便能得出估算值。</p>
 <p>下面是 <code>HyperLogLog</code> 的结合了调和平均数的估算公式，变量释意和<code>LogLog</code>的一样:</p>
-<p><img src="/2022/01/04/hyperloglog/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104104249450.png" alt="image-20220104104249450" style="zoom:33%;"></p>
+<p><img src="/2022/01/04/hyperloglog/image-20220104104249450.png" alt="image-20220104104249450" style="zoom:33%;"></p>
 <h1 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h1><div class="table-container">
 <table>
 <thead>
