@@ -27,18 +27,18 @@
 <meta property="og:site_name" content="AHHHHHHA">
 <meta property="og:description" content="reuse commonly employed data structures to solve double counting problem">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/01/04/INVEST/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104162944993.png">
-<meta property="og:image" content="http://example.com/2022/01/04/INVEST/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104162619153.png">
-<meta property="og:image" content="http://example.com/2022/01/04/INVEST/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104162631159.png">
-<meta property="og:image" content="http://example.com/2022/01/04/INVEST/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104162703178.png">
-<meta property="og:image" content="http://example.com/2022/01/04/INVEST/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104162717784.png">
-<meta property="og:image" content="http://example.com/2022/01/04/INVEST/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104162748911.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INVEST/image-20220104162944993.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INVEST/image-20220104162619153.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INVEST/image-20220104162631159.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INVEST/image-20220104162703178.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INVEST/image-20220104162717784.png">
+<meta property="og:image" content="http://example.com/2022/01/04/INVEST/image-20220104162748911.png">
 <meta property="article:published_time" content="2022-01-04T08:16:40.000Z">
-<meta property="article:modified_time" content="2022-01-04T11:07:49.440Z">
+<meta property="article:modified_time" content="2022-01-06T06:14:40.951Z">
 <meta property="article:author" content="Janene">
 <meta property="article:tag" content="heavy-hitter">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/01/04/INVEST/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220104162944993.png">
+<meta name="twitter:image" content="http://example.com/2022/01/04/INVEST/image-20220104162944993.png">
 
 <link rel="canonical" href="http://example.com/2022/01/04/INVEST/">
 
@@ -195,10 +195,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2022-01-04 16:16:40 / Modified: 19:07:49" itemprop="dateCreated datePublished" datetime="2022-01-04T16:16:40+08:00">2022-01-04</time>
+              <time title="Created: 2022-01-04 16:16:40" itemprop="dateCreated datePublished" datetime="2022-01-04T16:16:40+08:00">2022-01-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-06 14:14:40" itemprop="dateModified" datetime="2022-01-06T14:14:40+08:00">2022-01-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -215,7 +221,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>896</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -238,41 +244,50 @@
         <h1 id="title"><a href="#title" class="headerlink" title="title"></a>title</h1><p>In-Network Volumetric DDoS Victim Identification Using Programmable Commodity Switches</p>
 <h1 id="motivation"><a href="#motivation" class="headerlink" title="motivation"></a>motivation</h1><ul>
 <li>whenever a metric requires to set some global, network-wide threshold, then an accurate estimation of the total traffic volume is of paramount importance</li>
-<li><p>most assume that each packet is counted by a single programmable switch on its path through the network,</p>
-</li>
-<li><p>one could mark counted packets, but such a solution is inherently insecure since an attacker could pre-mark its packets, avoiding detection</p>
-</li>
+<li>但是会有多个交换机重复记录同一数据包</li>
+<li>most assume that each packet is counted by a single programmable switch on its path through the network,</li>
+<li>one could mark counted packets, but such a solution is inherently insecure since an attacker could pre-mark its packets, avoiding detection</li>
 </ul>
 <h1 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h1><p>given</p>
-<p><img src="/2022/01/04/INVEST/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104162944993.png" alt="image-20220104162944993" style="zoom:50%;"></p>
+<p><img src="/2022/01/04/INVEST/image-20220104162944993.png" alt="image-20220104162944993" style="zoom:50%;"></p>
 <p>return</p>
 <ul>
 <li><p>Distinct flow numbers  $\hat{n}_{tot}$</p>
 </li>
 <li><p>Average flow size $\hat{R}_{tot}$</p>
 </li>
-<li><p>==Total packets number$|\hat{S}_{tot}|$==</p>
+<li><p>Total packets number$|\hat{S}_{tot}|$（最终goal）</p>
 </li>
 </ul>
-<h1 id="algorithm"><a href="#algorithm" class="headerlink" title="algorithm"></a>algorithm</h1><ol>
-<li><p>Distinct flow numbers</p>
+<h1 id="algorithm"><a href="#algorithm" class="headerlink" title="algorithm"></a>algorithm</h1><p>在这项工作中利用的 HLL 的联合属性确保多个 HLL 寄存器，例如 Mm 和 Mn，可以合并到一个寄存器中 Mmn = Mm$\bigcup$Mn 来统计独立更新了 Mm 和 Mn 的数据包流的流基数，即$\hat{n}M<em>m\bigcup M</em>{n}$，<strong>避免重复计算</strong>。</p>
+<ol>
+<li><p><strong>Distinct flow numbers</strong></p>
 <p>$\hat{n_i}$是单个交换机$M_i$查询HLL得到的不同流数量的估计</p>
-<p><img src="/2022/01/04/INVEST/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104162619153.png" alt="image-20220104162619153" style="zoom:50%;"></p>
-<p>将集合中所有交换机求并集。</p>
-<p>在这项工作中利用的 HLL 的联合属性确保多个 HLL 寄存器，例如 Mm 和 Mn，可以合并到一个寄存器中 Mmn = Mm[Mn 来统计独立更新了 Mm 和 Mn 的数据包流的流基数，即$\hat{n}M<em>m\bigcup M</em>{n}$，<strong>避免重复计算</strong></p>
-<p><img src="/2022/01/04/INVEST/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104162631159.png" alt="image-20220104162631159" style="zoom:50%;"></p>
+<p><img src="/2022/01/04/INVEST/image-20220104162619153.png" alt="image-20220104162619153" style="zoom:50%;"></p>
+<p>将q个交换机中top-k交换机的hyperloglog求并集，估计得到总共有多少个不同流。</p>
 </li>
-<li><p>Average flow size</p>
-</li>
+</ol>
+<p>   <img src="/2022/01/04/INVEST/image-20220104162631159.png" alt="image-20220104162631159" style="zoom:50%;"></p>
+<p>   根据下式,topk交换机就可以估算所有交换机的distinct flow counts。</p>
+<script type="math/tex; mode=display">HLL Query(M_1\bigcup M_2\bigcup...\bigcup M_k) = \hat{n}_{tot}^2</script><ol>
+<li><strong>Average flow size</strong></li>
 </ol>
 <p>​    $\hat{R<em>i}$是（交换机i在$T</em>{int}$时候的packet num/单个交换机$M_i$查询HLL得到的不同流数量的估计），得到交换机i average packet num</p>
-<p><img src="/2022/01/04/INVEST/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104162703178.png" alt="image-20220104162703178" style="zoom:50%;"></p>
-<p>​    求q个交换机中top-k的交换机中估计得到的$\hat{n_i}$ 的平均值</p>
-<p><img src="/2022/01/04/INVEST/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104162717784.png" alt="image-20220104162717784" style="zoom:50%;"></p>
+<p><img src="/2022/01/04/INVEST/image-20220104162703178.png" alt="image-20220104162703178" style="zoom:50%;"></p>
+<p>​    求q个交换机中<strong>top-k</strong>的交换机中估计得到的$\hat{n_i}$ 的平均值</p>
+<p><img src="/2022/01/04/INVEST/image-20220104162717784.png" alt="image-20220104162717784" style="zoom:50%;"></p>
 <ol>
-<li>Total packets number</li>
+<li><strong>Total packets number</strong></li>
 </ol>
-<p><img src="/2022/01/04/INVEST/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220104162748911.png" alt="image-20220104162748911" style="zoom:50%;"></p>
+<p><img src="/2022/01/04/INVEST/image-20220104162748911.png" alt="image-20220104162748911" style="zoom:50%;"></p>
+<h1 id="evaluation"><a href="#evaluation" class="headerlink" title="evaluation"></a>evaluation</h1><ul>
+<li>sensitive to many…</li>
+<li>在敏感度分析中用上了他之前的deployment的工作，也提到了apaptive threshold</li>
+</ul>
+<h1 id="💡"><a href="#💡" class="headerlink" title="💡"></a>💡</h1><ul>
+<li>sensitive to flow key types, time interval width, network topology, …不鲁棒，受太多因素的影响了</li>
+<li>提醒了我再deployment那个工作中需要注意长尾分布和全是大流的情况下，对总体流量的估计是不准确的，会低估</li>
+</ul>
 
     </div>
 
@@ -353,7 +368,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#title"><span class="nav-number">1.</span> <span class="nav-text">title</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#motivation"><span class="nav-number">2.</span> <span class="nav-text">motivation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Goal"><span class="nav-number">3.</span> <span class="nav-text">Goal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#algorithm"><span class="nav-number">4.</span> <span class="nav-text">algorithm</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#title"><span class="nav-number">1.</span> <span class="nav-text">title</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#motivation"><span class="nav-number">2.</span> <span class="nav-text">motivation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Goal"><span class="nav-number">3.</span> <span class="nav-text">Goal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#algorithm"><span class="nav-number">4.</span> <span class="nav-text">algorithm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#evaluation"><span class="nav-number">5.</span> <span class="nav-text">evaluation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%92%A1"><span class="nav-number">6.</span> <span class="nav-text">💡</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -431,7 +446,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">11 mins.</span>
+    <span title="Reading time total">12 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
