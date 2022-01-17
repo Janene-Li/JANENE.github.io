@@ -20,22 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="各种data structure慢慢总结。。。">
+  <meta name="description" content="forecast + bit packeting + entropy coding">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sketch">
-<meta property="og:url" content="http://example.com/2021/12/07/sketch/index.html">
+<meta property="og:title" content="Sprintz">
+<meta property="og:url" content="http://example.com/2022/01/11/Sprintz/index.html">
 <meta property="og:site_name" content="AHHHHHHA">
-<meta property="og:description" content="各种data structure慢慢总结。。。">
+<meta property="og:description" content="forecast + bit packeting + entropy coding">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png">
-<meta property="article:published_time" content="2021-12-07T09:18:55.000Z">
-<meta property="article:modified_time" content="2021-12-08T08:24:37.285Z">
+<meta property="og:image" content="http://example.com/2022/01/11/Sprintz/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220112152340440.png">
+<meta property="article:published_time" content="2022-01-11T12:22:39.000Z">
+<meta property="article:modified_time" content="2022-01-12T12:51:28.552Z">
 <meta property="article:author" content="Janene">
-<meta property="article:tag" content="sketch">
+<meta property="article:tag" content="compress data">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png">
+<meta name="twitter:image" content="http://example.com/2022/01/11/Sprintz/Users/Janene/AppData/Roaming/Typora/typora-user-images/image-20220112152340440.png">
 
-<link rel="canonical" href="http://example.com/2021/12/07/sketch/">
+<link rel="canonical" href="http://example.com/2022/01/11/Sprintz/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>sketch | AHHHHHHA</title>
+  <title>Sprintz | AHHHHHHA</title>
   
 
 
@@ -168,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/07/sketch/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/11/Sprintz/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          sketch
+          Sprintz
         </h1>
 
         <div class="post-meta">
@@ -191,14 +191,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-12-07 17:18:55" itemprop="dateCreated datePublished" datetime="2021-12-07T17:18:55+08:00">2021-12-07</time>
+              <time title="Created: 2022-01-11 20:22:39" itemprop="dateCreated datePublished" datetime="2022-01-11T20:22:39+08:00">2022-01-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-08 16:24:37" itemprop="dateModified" datetime="2021-12-08T16:24:37+08:00">2021-12-08</time>
+                <time title="Modified: 2022-01-12 20:51:28" itemprop="dateModified" datetime="2022-01-12T20:51:28+08:00">2022-01-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,7 +206,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/summary/" itemprop="url" rel="index"><span itemprop="name">summary</span></a>
+                  <a href="/categories/paper/" itemprop="url" rel="index"><span itemprop="name">paper</span></a>
                 </span>
             </span>
 
@@ -223,7 +223,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.5k</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -232,7 +232,7 @@
                 <span class="post-meta-item-text">Reading time &asymp;</span>
               <span>1 mins.</span>
             </span>
-            <div class="post-description">各种data structure慢慢总结。。。</div>
+            <div class="post-description">forecast + bit packeting + entropy coding</div>
 
         </div>
       </header>
@@ -243,40 +243,213 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1-基数估计算法"><a href="#1-基数估计算法" class="headerlink" title="1. 基数估计算法"></a>1. 基数估计算法</h1><h2 id="Linear-counting"><a href="#Linear-counting" class="headerlink" title="Linear counting"></a>Linear counting</h2><p>该算法用于估测数据基数，也就是说有多少不同元素，采用方法非常简单，将数据哈希到长度为m的数组，访问到的位置就置为1</p>
+        <h1 id="0-background"><a href="#0-background" class="headerlink" title="0. background"></a>0. background</h1><p>物联网小bit蓝牙传输压缩。</p>
+<h1 id="1-goal"><a href="#1-goal" class="headerlink" title="1. goal"></a>1. goal</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>timestamp</th>
+<th>col_1</th>
+<th>col_2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123</td>
+<td>56</td>
+<td>4</td>
+</tr>
+<tr>
+<td>124</td>
+<td>57</td>
+<td>4</td>
+</tr>
+<tr>
+<td>130</td>
+<td>55</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>对于上表由多条record组成的时间序列block按照列方向进行压缩，打包成压缩块（pack）。</p>
+<h1 id="2-Algorithm"><a href="#2-Algorithm" class="headerlink" title="2. Algorithm"></a>2. Algorithm</h1><p>选择这些步骤的原因：</p>
 <ul>
-<li><p>设有一哈希函数$H$，其哈希结果空间有m个值（最小值0，最大值m-1），且哈希结果均匀分布。</p>
-</li>
-<li><p>使用一个长度为$m$的bitmap，每个bit为一个bucket（初始化为0）。</p>
-</li>
-<li><p>设一个集合的基数为$n$，此集合所有元素通过$H$哈希到bitmap中，如果某一个元素被哈希到第k个比特并且第k个比特为0，则将其置为1。</p>
-</li>
-<li>当集合所有元素哈希完成后，设bitmap中还有$u$个bit为0。</li>
+<li>forecast：连续样本具有高度相似性</li>
+<li>run-length：数据没变化的时候极端压缩</li>
+<li>bit pack：同一block使用相同宽度，利用数据周期相关</li>
+<li>entropy：提高压缩比</li>
 </ul>
-<p><img src="http://blog.codinglabs.org/uploads/pictures/algorithms-for-cardinality-estimation-part-ii/1.png" alt="Linear Counting"></p>
-<p>我们可以近似认为$n$足够大的时候，哈希的结果服从均匀分布，</p>
-<script type="math/tex; mode=display">
-E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似然估计为:</p>
-<script type="math/tex; mode=display">
--m*ln(\frac{u}{m})</script><p>LC需要的空间只有传统bitmap的$\frac{1}{10}$, 从渐进的角度看空间复杂度仍为$O(N_{max})$</p>
-<p>详细推导过程见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wbin233/article/details/78752597">https://blog.csdn.net/wbin233/article/details/78752597</a></p>
-<blockquote>
-<p>论文：- Whang, Kyu-Young, Brad T. Vander-Zanden, and Howard M. Taylor. “A linear-time probabilistic counting algorithm for database applications.” ACM Transactions on Database Systems (TODS) 15.2 (1990): 208-229.</p>
-</blockquote>
-<h3 id="FM-Sketch（PCSA）"><a href="#FM-Sketch（PCSA）" class="headerlink" title="FM Sketch（PCSA）"></a><strong>FM Sketch</strong>（PCSA）</h3><p>该算法是基于概率来估计基数，首先我们根据数据随机情况观察二进制的性质，可以发现末尾有k个连续0的情况出现次数是按比例缩小的，因此我们基于这个观察得出估计方法</p>
-<p>首先我们随机一个哈希函数将数据映射到一个二进制长度为L的空间内（即 $[0,2^L-1]$），我们记录BITMAP来标记是否出现一个数后尾恰好有连续i个0，这样显然根据访问的概率就可以估计数据基数，我们取在bitmap中第一个为0的位置，即我们没有映射后末尾恰好有$k$个0的key，因此我们用$k$来近似$logn$，显然这样数据是偏小的，论文根据计算添加了偏差参数$E(k)=log\phi n, \phi = 0.77351…$</p>
-<p>显然这样还是不太准确，于是就采用了多次哈希的方式，我们利用得到的$k$的均值来进行估计</p>
-<blockquote>
-<p>论文：Flajolet, Philippe, and G. Nigel Martin. “Probabilistic counting algorithms for data base applications.” <em>Journal of computer and system sciences</em> 31.2 (1985): 182-209.</p>
-</blockquote>
-<h3 id="LogLog"><a href="#LogLog" class="headerlink" title="LogLog"></a><strong>LogLog</strong></h3><p>顾名思义，就是利用$loglogn$的空间来实现估测基数的算法。可以说基本就是FM的优化，我们记录$p(x)$表示对于想哈希之后末尾有$p(x)$个0，那么其实我们只需要记录$max(p(x))$即可，因此该空间为$loglogn$的</p>
-<p>那么同样，我们可以采用将数据随机分桶统计，通过求max的平均值来估测</p>
-<p>HyperLogLog算法使用调和平均值将它们组合成原始基数的估计值</p>
-<blockquote>
-<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/271186546">https://zhuanlan.zhihu.com/p/271186546</a></p>
-<p>hyperloglog demo:<a target="_blank" rel="noopener" href="http://content.research.neustar.biz/blog/hll.html）">http://content.research.neustar.biz/blog/hll.html）</a></p>
-<p>基数估计算法（包括HLL、AC）</p>
-</blockquote>
+<p><img src="/2022/01/11/Sprintz/Users\Janene\AppData\Roaming\Typora\typora-user-images\image-20220112152340440.png" alt="image-20220112152340440"></p>
+<h2 id="2-1-forecasting"><a href="#2-1-forecasting" class="headerlink" title="2.1 forecasting"></a>2.1 forecasting</h2><h3 id="（1）delta-算法"><a href="#（1）delta-算法" class="headerlink" title="（1）delta 算法"></a>（1）delta 算法</h3><p>$forecast<em>x = x</em>{i-1}$</p>
+<p>例如col_1：$x_1=56,x_2 = 57, x_3 = 55; forecast_x_2=56, forecast_x_3=57$</p>
+<h3 id="（2）fast-integer-regression"><a href="#（2）fast-integer-regression" class="headerlink" title="（2）fast integer regression"></a>（2）fast integer regression</h3><p>$forecast_x<em>i = x</em>{i-1} + \alpha x<em>{i-1} - \alpha x</em>{i-2} + \epsilon_i$</p>
+<p>$\alpha $由机器学习算法得到</p>
+<p>论文中没有提及fast integer regression的存储和使用，在后续的简介中都是以delta算法为例陈述。</p>
+<h3 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h3><p>压缩算法不直接存储$x_i$也不存储$forecast_x_i$，而是存储$err_i = x_i-forecast_x_i$</p>
+<h2 id="2-2-bit-packing"><a href="#2-2-bit-packing" class="headerlink" title="2.2 bit packing"></a>2.2 bit packing</h2><p>Bit pack 在论文中也是以delta算法为基础介绍的。</p>
+<p>sprintz算法以数据块（block）为单位进行压缩。对于每一个数据块而言，上一块数据块的最后一条记录（record），称为“previous value”。</p>
+<p>不妨设previous value为：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>123</th>
+<th>55</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>经过delta算法处理后，得到delta数据块</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>delta_timestamp</th>
+<th>delta_col_1</th>
+<th>delta_col_2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>-2</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>由于出现负数，为方便后续进行二进制编码，进行zigzag encoding。即对于正整数，可以把无意义的0去掉，只存储从1开始的”有效”数据，这样就可以压缩数据了。例如，对于正整数1，其补码(当代计算机中实际按补码表示整数)按位展开，即为(00000000 00000000 00000000 00000001)补，显然，我们可以只用一个字节甚至1bit来存储有效数据。（<strong>算术左移低位补0；算术右移，若符号位为0，高位补0；若符号位为1，高位补1；</strong>）</p>
+<p>得到</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>zigzag_timestamp</th>
+<th>zigzag_col_1</th>
+<th>zigzag_col_2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>12</td>
+<td>3</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>变为二进制表示</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>bit_timestamp</th>
+<th>bit_col_1</th>
+<th>bit_col_2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>10</td>
+<td>0</td>
+</tr>
+<tr>
+<td>10</td>
+<td>10</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>10</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4bit表示</td>
+<td>2bit表示</td>
+<td>0bit表示</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>由最后一行得到header</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>100（十进制表示4）</th>
+<th>10（十进制表示2）</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>整理得到压缩块</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>header</strong></th>
+<th><strong>100</strong></th>
+<th><strong>10</strong></th>
+<th><strong>0</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>payload1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>10</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td><strong>payload2</strong></td>
+<td><strong>10</strong></td>
+<td><strong>10</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td><strong>payload3</strong></td>
+<td><strong>1100</strong></td>
+<td><strong>10</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="2-3-entropy-coding"><a href="#2-3-entropy-coding" class="headerlink" title="2.3 entropy coding"></a>2.3 entropy coding</h2><p>对Header跟Payload使用哈夫曼编码。</p>
 
     </div>
 
@@ -286,7 +459,7 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/sketch/" rel="tag"># sketch</a>
+              <a href="/tags/compress-data/" rel="tag"># compress data</a>
           </div>
 
         
@@ -294,10 +467,13 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/12/15/Spreadskech/" rel="next" title="Spreadskech">
-      Spreadskech <i class="fa fa-chevron-right"></i>
+    <a href="/2022/01/07/ACC/" rel="prev" title="ACC">
+      <i class="fa fa-chevron-left"></i> ACC
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/17/SketchML/" rel="next" title="SketchML">
+      SketchML <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -357,7 +533,7 @@ E(U_n)= me^{\frac{-n}{m}}</script><p>那么最后设集合基数为n的最大似
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%9F%BA%E6%95%B0%E4%BC%B0%E8%AE%A1%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">1. 基数估计算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-counting"><span class="nav-number">1.1.</span> <span class="nav-text">Linear counting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FM-Sketch%EF%BC%88PCSA%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">FM Sketch（PCSA）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LogLog"><span class="nav-number">1.1.2.</span> <span class="nav-text">LogLog</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-background"><span class="nav-number">1.</span> <span class="nav-text">0. background</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-goal"><span class="nav-number">2.</span> <span class="nav-text">1. goal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Algorithm"><span class="nav-number">3.</span> <span class="nav-text">2. Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-forecasting"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 forecasting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89delta-%E7%AE%97%E6%B3%95"><span class="nav-number">3.1.1.</span> <span class="nav-text">（1）delta 算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89fast-integer-regression"><span class="nav-number">3.1.2.</span> <span class="nav-text">（2）fast integer regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8"><span class="nav-number">3.1.3.</span> <span class="nav-text">存储</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-bit-packing"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 bit packing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-entropy-coding"><span class="nav-number">3.3.</span> <span class="nav-text">2.3 entropy coding</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
